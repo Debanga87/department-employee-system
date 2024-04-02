@@ -17,9 +17,9 @@ public class Employee {
 
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+    @ManyToOne // Many employees belong to one department
+    @JoinColumn(name = "department_id") // Join column to map department_id in the employees table
+    private Department department; // Reference to the department entity
 
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
